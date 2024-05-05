@@ -1,0 +1,101 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+</head>
+
+<body>
+    <div id="search_box">
+        <input type="search" placeholder="Search here" />
+        <div id="searchclose" onclick="searchfun_close">X</div>
+    </div>
+    <ul id="navbar">
+        <li id="title"><a href="{% url 'home' %}">EduState</a></li>
+        <li><a href="{% url 'home' %}">Home</a></li>
+        <li><a href="{% url 'about' %}">About</a></li>
+        <li id="product_btn">Product
+            <ul id="Product_dropdown_btn">
+                <li><a href="{% url 'course' %}">Courses </a></li>
+                <li><a href="{% url 'courses' %}">Course Details</a></li>
+                <li><a href="{% url 'elements' %}">Elements</a></li>
+            </ul>
+        </li>
+        <li id="Blog_btn">Blog
+            <ul id="blog_dropdown_btn">
+                <li><a href="{% url 'blog' %}">Blog </a></li>
+                <li><a href="{% url 'blog_detail' %}">Blog Details</a></li>
+            </ul>
+        </li>
+        <li><a href="{% url 'contact' %}">Contact</a></li>
+        <li><a href="{% url 'login' %}">Login</a></li>
+        <li id="srch_btn" onclick="searchfun_open">Search</li>
+    </ul>
+    {% block content %}
+
+    {% endblock content %}
+    <footer>
+        <div id="footer_Top">
+            <ul>
+                <li>Top Products</li>
+                <li><a href="">Managed Website</a></li>
+                <li><a href="">Manage Reputation</a></li>
+                <li><a href="">Power Tools</a></li>
+                <li><a href="">Marketing Service</a></li>
+            </ul>
+
+            <ul>
+                <li>Quick Links</li>
+                <li><a href="">Jobs</a></li>
+                <li><a href="">Brand Assets</a></li>
+                <li><a href="">Investor Relations</a></li>
+                <li><a href="">Terms of Service</a></li>
+            </ul>
+
+            <ul>
+                <li>Features</li>
+                <li><a href="">Jobs</a></li>
+                <li><a href="">Brand Assets</a></li>
+                <li><a href="">Investor Relations</a></li>
+                <li><a href="">Terms of Service</a></li>
+            </ul>
+
+            <ul>
+                <li>Resources</li>
+                <li><a href="">Guides</a></li>
+                <li><a href="">Research</a></li>
+                <li><a href="">Experts</a></li>
+                <li><a href="">Agencies</a></li>
+            </ul>
+
+            <div id="newsfooter">
+                <h3>Newsletter</h3>
+                <h4>You can trust us. we only send promo offers</h4>
+                <div id="sear_subscribe">
+                    <input type="text" value="" placeholder="Your Email Address" />
+                    <div id="Subscribe_btn">Subscribe</div>
+                </div>
+            </div>
+        </div>
+        <div id="footer_bottom">
+            <div id="copy_right">
+                Copyright ©2024 All rights reserved | This template is made and developed by indrajeet yadav
+            </div>
+            <ul id="social_link">
+                <li><a href=""><img src="" alt=""></a></li>
+                <li><a href=""><img src="" alt=""></a></li>
+                <li><a href=""><img src="" alt=""></a></li>
+                <li><a href=""><img src="" alt=""></a></li>
+            </ul>
+
+        </div>
+    </footer>
+
+    <script src="{% static 'javascript/index.js' %}"></script>
+</body>
+
+</html>

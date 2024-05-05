@@ -1,0 +1,152 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#search_box {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    display: none;
+}
+
+#search_box input {
+    width: 400px;
+    height: 30px;
+    padding-left: 15px;
+}
+
+#searchclose,
+#srch_btn {
+    cursor: pointer;
+}
+
+#navbar {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    background-color: rgb(65, 65, 66);
+}
+
+#navbar #title {
+    color: aliceblue;
+    font-size: 25px;
+}
+
+#navbar li a,
+#navbar li {
+    color: aliceblue;
+    text-decoration: none;
+}
+
+#product_btn,
+#Blog_btn {
+    position: relative;
+}
+
+#Product_dropdown_btn {
+    list-style: none;
+    display: none;
+    position: absolute;
+    top: 20px;
+}
+
+#blog_dropdown_btn {
+    list-style: none;
+    display: none;
+    position: absolute;
+    top: 20px;
+}
+
+/* ============ Footer section ======== */
+footer {
+    background-color: rgb(72, 66, 66);
+}
+
+#footer_Top {
+    display: flex;
+    justify-content: space-around;
+    /* align-items: center; */
+    margin-bottom: 15px;
+}
+
+#footer_Top ul {
+    list-style: none;
+}
+
+#footer_Top ul li {
+    margin-top: 5px;
+    font-size: 20px;
+    font-weight: 900;
+    /* text-decoration: underline; */
+    color: rgb(219, 220, 221);
+}
+
+#footer_Top ul li a {
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    color: rgb(205, 209, 212);
+}
+
+#newsfooter h3,
+#newsfooter h4 {
+    color: rgb(205, 209, 212);
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+#sear_subscribe {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+#sear_subscribe input {
+    width: 200px;
+    height: 35px;
+    border: none;
+    outline: none;
+    padding-left: 10px;
+}
+
+#Subscribe_btn {
+    width: 100px;
+    height: 35px;
+    border: none;
+    outline: none;
+    background-color: orange;
+    text-align: center;
+    padding-top: 5px;
+    font-size: 20px;
+}
+
+#footer_bottom {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#copy_right {
+    font-size: 16px;
+    color: aliceblue;
+}
+
+#social_link {
+    width: 220px;
+    /* list-style: none; */
+    height: 40px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* ============= Home page ========== */
+/* #home_adv_video{
+    margin-left: 5%;
+} */
