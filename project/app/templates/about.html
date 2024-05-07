@@ -1,7 +1,16 @@
 {% extends 'base.html' %}
-
+{% load static %} 
 {% block content %}
-
-<video src=""></video>
+<div id="slider_wrapper">
+    <div id="slider_block">
+        <img src="{% static '/image/1.jpg' %}" alt="" />
+        <img src="{% static '/image/3.jpg' %}" alt="" />
+        <img src="{% static '/image/5.jpg' %}" alt="" />
+        <img src="{% static '/image/12.jpg' %}" alt="" />
+        <img src="{% static '/image/19.jpg' %}" alt="" />
+        <img src="{% static '/image/25.jpg' %}" alt="" />
+        <img src="{% static '/image/45.jpg' %}" alt="" />
+    </div>
+</div>
 
 {% endblock content %}

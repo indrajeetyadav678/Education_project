@@ -12,4 +12,6 @@ urlpatterns=[
     path('blog_detail/', blog_detail, name='blog_detail'),
     path('contact/', contact, name='contact'),
     path('login/', login, name='login'),
+    path('regist/', regist, name='regist'),
+    path('signup/', signup, name='Registration'),
 ]

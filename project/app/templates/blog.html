@@ -1,7 +1,18 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block content %}
+<label style="font-size: 25px;">Aao raja</label>
+<audio src="{% static 'audio/Aao_Raja.mp3' %}" controls autoplay type="audio/mp3">Aao raja</audio>
+<br/>
+<label style="font-size: 25px;">Chatak_Matak</label>
+<audio src="{% static 'audio/Chatak_Matak.mp3' %}" controls autoplay type="audio/mp3">Chatak_Matak</audio>
+<br/>
+<label style="font-size: 25px;">Daru_Badnaam </label>
+<audio src="{% static 'audio/Daru_Badnaam.mp3' %}" controls autoplay type="audio/mp3">Daru_Badnaam</audio>
 
-<img src="" alt="">
+<br/>
+<label style="font-size: 25px;">Roi_na</label>
+<audio src="{% static 'audio/Roi_na.mp3' %}" controls autoplay type="audio/mp3">Roi_na</audio>
 
 {% endblock content %}

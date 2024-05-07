@@ -1,6 +1,23 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<div id="logbody">
+    <div id="logform_wrapper">
+        <form id="form" action="" method="POST" target="_self">
+            <div>Login</div>
+            <input type="text" name="name" placeholder="name" /><br /><br />
+            <input type="password" name="password" placeholder="password" /><br /><br />
+           <div>
+            <div style="text-align: center;">
+                <input type="checkbox" name="forget"/>
+                <label id="forget" style="font-size: 16px;">Forget password</label>
+            </div>
+            <div><a href="{% url 'signup' %}">create account</a></div>
+        </div>
+            <input type="submit" value="login"  id="submitbtn"/>
+        </form>
 
+    </div>
+</div>
 
 {% endblock content %}

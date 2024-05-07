@@ -1,8 +1,12 @@
 {% extends 'base.html' %}
+{% load static %}
+
 
 {% block content %}
 
 <h1>Contact US</h1>
-<img src="" alt="">
+<!-- <img src="" alt=""> -->
+<img src="{% static '/image/5.jpg' %}" alt=""  style="width: 100%; height: 500px"/>
+<img src="{% static '/image/25.jpg' %}" alt="" style="width: 100%; height: 500px" /> 
 
 {% endblock content %}

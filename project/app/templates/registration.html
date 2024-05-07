@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div id="logbody">
+    <div id="logform_wrapper" style="height: 460px;">
+        <form id="form" action="{% url 'regist' %}" method="POST" target="_self">
+            {% csrf_token %}
+            <div>Registration Form</div>
+            <input type="text" name="name" placeholder="name" /><br /><br />
+            <input type="email" name="email" placeholder="email" /><br /><br />
+            <input type="password" name="password" placeholder="password" /><br /><br />
+            <input type="password" name="con-password" placeholder=" confirm password" /><br /><br />
+            <input type="submit" value="Signup"  id="submitbtn"/>
+        </form>
+
+    </div>
+</div>
+
+{% endblock content %}
