@@ -45,10 +45,18 @@ def regist(request):
     # ------------------------------------------
     # tst_Password= request.POST['name']
     # py_data={Name=Name,}
-    Registration.objects.create(Name=name,Email=email,Password=password,Con_password=con_Password)
-    # msg=("registration successfully done")
-    messages.success(request, 'your data successfully register')
-    return render(request, 'login.html')
+    data= Registration.objects.filter( Email = email)
+    if data:
+        msg = "user id already exist"
+        return render(request, 'login.html', {'key':msg})
+    elif password==con_Password:
+        Registration.objects.create(Name=name,Email=email,Password=password,Con_password=con_Password)
+        msg1=("registration successfully done")
+        messages.success(request, 'your data successfully register')
+        return render(request, 'login.html', {' key':msg1})
+    else:
+        msg = "your password does not match"
+        return render(request, 'login.html', {'key':msg})
 
 def loginform(request):
     print(request.method)

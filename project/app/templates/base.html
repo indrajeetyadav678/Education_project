@@ -11,10 +11,12 @@
 </head>
 
 <body>
-    <div id="search_box">
-        <input type="search" placeholder="Search here" />
-        <div id="searchclose" onclick="searchfun_close()">X</div>
-    </div>
+    <center>
+        <div id="search_box">
+            <input type="search" placeholder="Search here" />
+            <label id="searchclose" onclick="searchfun_close()">X</label>
+        </div>
+    </center>
     <ul id="navbar">
         <li id="title"><a href="{% url 'home' %}">EduState</a></li>
         <li><a href="{% url 'home' %}">Home</a></li>
@@ -95,7 +97,8 @@
 
         </div>
     </footer>
-    
+
 
 </body>
+
 </html>

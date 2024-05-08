@@ -6,14 +6,16 @@
         <form id="form" action="{% url 'loginform' %}" method="POST" target="_self">
             {% csrf_token %}
             <div>Login</div>
-            <input type="text" name="username" placeholder="name" /><br /><br />
-            <input type="password" name="password" placeholder="password" /><br /><br />
-            <div style="display: flex; justify-content: center; align-items: center;">
-                <div style="text-align: center; height: 25px;">
-                    <input type="radio" name="forname" id="forget" style="width: 10px;" />
+            <input type="text" name="username" placeholder="Enter your user id " /><br /><br />
+            <input type="password" name="password" placeholder="Password" /><br />
+            <div style="display: flex; justify-content:space-around; align-items: center; width:400px; height: 30px;">
+                <div style="height: 25px; display: flex; justify-content: space-between; align-items: center;">
+                    <input type="checkbox" name="forname" id="forget" />
                     <label for="forget" style="font-size: 16px;">Forget password</label>
                 </div>
-                <div><a style="font-size: 16px;" href="{% url 'signup' %}  >create account</a></div>
+                <div>
+                    <a style="font-size: 16px;" href="{% url 'signup' %}" >create account </a>
+                </div>
             </div>
             <input type="submit" value="login" id="submitbtn" />
         </form>
