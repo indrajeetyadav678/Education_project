@@ -31,6 +31,7 @@
     width: 100%;
     height: 50px;
     background-color: rgb(65, 65, 66);
+    /* display: none; */
 }
 
 #navbar #title {
@@ -55,19 +56,33 @@
     display: none;
     position: absolute;
     top: 20px;
+    width: 150px;
+    height: 90px;
+    background-color: rgb(74, 70, 70);
+    padding-left: 10px;
+}
+#Product_dropdown_btn li{
+    margin-top: 10px;
 }
 
 #blog_dropdown_btn {
     list-style: none;
     display: none;
     position: absolute;
-    top: 20px;
+    top: 35px;
+    width: 100px;
+    height: 80px;
+    background-color: rgb(74, 70, 70);
+    padding-left: 10px;
+}
+#blog_dropdown_btn li {
+    margin-top: 10px;
+
 }
 
-#product_btn:hover~#blog_dropdown_btn{
-    /* display: block; */
+#Blog_btn:hover{
     color: red;
-}
+} 
 
 /* ============ Footer section ======== */
 footer {

@@ -3,18 +3,19 @@
 {% block content %}
 <div id="logbody">
     <div id="logform_wrapper">
-        <form id="form" action="" method="POST" target="_self">
+        <form id="form" action="{% url 'loginform' %}" method="POST" target="_self">
+            {% csrf_token %}
             <div>Login</div>
-            <input type="text" name="name" placeholder="name" /><br /><br />
+            <input type="text" name="username" placeholder="name" /><br /><br />
             <input type="password" name="password" placeholder="password" /><br /><br />
-           <div>
-            <div style="text-align: center;">
-                <input type="checkbox" name="forget"/>
-                <label id="forget" style="font-size: 16px;">Forget password</label>
+            <div style="display: flex; justify-content: center; align-items: center;">
+                <div style="text-align: center; height: 25px;">
+                    <input type="radio" name="forname" id="forget" style="width: 10px;" />
+                    <label for="forget" style="font-size: 16px;">Forget password</label>
+                </div>
+                <div><a style="font-size: 16px;" href="{% url 'signup' %}  >create account</a></div>
             </div>
-            <div><a href="{% url 'signup' %}">create account</a></div>
-        </div>
-            <input type="submit" value="login"  id="submitbtn"/>
+            <input type="submit" value="login" id="submitbtn" />
         </form>
 
     </div>

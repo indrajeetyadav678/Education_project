@@ -13,5 +13,7 @@ urlpatterns=[
     path('contact/', contact, name='contact'),
     path('login/', login, name='login'),
     path('regist/', regist, name='regist'),
-    path('signup/', signup, name='Registration'),
+    path('signup/', signup, name='signup'),
+    path('loginform/', loginform, name='loginform'),
+
 ]

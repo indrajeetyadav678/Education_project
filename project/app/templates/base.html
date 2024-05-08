@@ -7,33 +7,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <script src="{% static 'javasc/index.js' %}"></script>
 </head>
 
 <body>
     <div id="search_box">
         <input type="search" placeholder="Search here" />
-        <div id="searchclose" onclick="searchfun_close">X</div>
+        <div id="searchclose" onclick="searchfun_close()">X</div>
     </div>
     <ul id="navbar">
         <li id="title"><a href="{% url 'home' %}">EduState</a></li>
         <li><a href="{% url 'home' %}">Home</a></li>
         <li><a href="{% url 'about' %}">About</a></li>
-        <li id="product_btn"><a href="{% url 'course' %}">Product</a>
-            <!-- <ul id="Product_dropdown_btn">
+        <li onmouseenter="proddropmanu_open()" id="product_btn">Product
+            <ul id="Product_dropdown_btn" onmouseleave="proddropmanu_close()">
                 <li><a href="{% url 'course' %}">Courses </a></li>
                 <li><a href="{% url 'courses' %}">Course Details</a></li>
                 <li><a href="{% url 'elements' %}">Elements</a></li>
-            </ul> -->
+            </ul>
         </li>
-        <li id="Blog_btn"><a href="{% url 'blog' %}">Blog</a>
-            <!-- <ul id="blog_dropdown_btn">
+        <li onmouseenter="diddropmanu_open()">Blog
+            <ul id="blog_dropdown_btn" onmouseleave="diddropmanu_close()">
                 <li><a href="{% url 'blog' %}">Blog </a></li>
                 <li><a href="{% url 'blog_detail' %}">Blog Details</a></li>
-            </ul> -->
+            </ul>
         </li>
         <li><a href="{% url 'contact' %}">Contact</a></li>
         <li><a href="{% url 'login' %}">Login</a></li>
-        <li id="srch_btn" onclick="searchfun_open">Search</li>
+        <li id="srch_btn" onclick="searchfun_open()">Search</li>
     </ul>
     {% block content %}
 
@@ -94,8 +95,7 @@
 
         </div>
     </footer>
+    
 
-    <script src="{% static 'javascript/index.js' %}"></script>
 </body>
-
 </html>
